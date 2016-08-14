@@ -21,6 +21,7 @@ public class DetailActivity extends AppCompatActivity implements View.OnClickLis
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_detail);
 
         mButton = (Button)findViewById(R.id.button);
@@ -38,7 +39,7 @@ public class DetailActivity extends AppCompatActivity implements View.OnClickLis
 
     @Override
     public void onClick(View v) {
-        EventBus.getDefault().post( new String("이규호") ); //khee: send post with normal string
+        EventBus.getDefault().post( new String( mEtText.getText().toString()) ); //khee: send post with normal string
         Toast.makeText(getApplication(), "Sending message..." + mEtText.getText().toString(), Toast.LENGTH_SHORT).show();
         finish();
     }

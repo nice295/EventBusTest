@@ -35,6 +35,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         EventBus.getDefault().register(this); //khlee: needed to register if this activity has a event function.
 
         mButton = (Button)findViewById(R.id.button);
